@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+	<user>
+		<id>1</id>
+		<firstname>First</firstname>
+		<lastname> User</lastname>
+	</user>
+	<user>
+		<id>2</id>
+		<firstname>Second</firstname>
+		<lastname> User</lastname>
+	</user>
+	<user>
+		<id>3</id>
+		<firstname>Third</firstname>
+		<lastname> User</lastname>
+	</user>
+</elements>

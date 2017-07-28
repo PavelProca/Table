@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+</head>
+<body>
+<script type="text/javascript">
+	// LOAD XML FILE
+	if (window.XMLHttpRequest) {
+		xmlhttp = new XMLHttpRequest();
+	} else {
+		xmlhttp = ActiveXObject("Microsoft.XMLHTTP");
+	};
+
+	xmlhttp.open("GET", "elements.xml", false);
+	xmlhttp.send();
+	xmlDoc = xmlhttp.responseXML;
+	// GET ALL ELEMENTS
+	var users = xmlDoc.getElementsByTagName("user");
+	// MAKE A TABLE
+	document.write('<table border="1">');
+	for (var i = 0; i < users.length; i++) {
+		var options = users[i].children;
+		document.write('<tr>');
+		// GET USERS INFORMATION & WRITE IT INTO TABLE <TD>
+		for (var a = 0; a < options.length; a++) {
+			document.write('<td>');
+			document.write(options[a].childNodes[0].nodeValue);
+			document.write('</td>');
+		}
+		document.write('</tr>')
+	}
+	document.write('</table>');
+</script>
+</body>
+</html>
